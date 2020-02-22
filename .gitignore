@@ -1,0 +1,4 @@
+# ignore a single file
+/.sass-cache/
+
+.sass-cache
