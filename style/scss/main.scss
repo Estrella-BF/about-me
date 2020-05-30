@@ -36,7 +36,18 @@ hr{
   height: 0px;
   text-align: center;
   margin-top: 0;
- }
+}
+
+ul {
+  list-style: none;
+}
+
+.subtitle {
+  color: #318f7c;
+  font-family: "Comfortaa", serif;
+  font-weight: bolder;
+  font-size: 20px;
+}
 
 #my-skills, #tech-skills, #my-projects {
   padding: 3em 0;
@@ -92,14 +103,20 @@ canvas {
   height: 100%;
 }
 
+.arrow-down {
+  color: white;
+  font-size: 50px;
+  text-align: right;
+  margin-right: 46px;
+}
+
 /* MAIN MENU */
 .background-box {
-  background-color: #14191e;
+  background-color: #050818;
   position: relative;
-  height: 60vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-evenly; */
   padding: 1.5em 0;
   .menu-box {
     font-size: 1.8rem;
@@ -184,9 +201,34 @@ canvas {
       min-width: 130px;
     }
   }
-  
+  .tech-skills-list {
+    ul {
+      margin-left: 11px;
+
+      li {
+        padding: 8px 0;
+      }
+    }
+  }
+
   .tech-skills-box{
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 7px 0px;
+
+    .tech-skills__bar {
+      background-color: white;
+      border: 1px solid #e8dbdb;
+      border-radius: 4px;
+      height: 12px;
+      width: 80%;
+    }
+
+    .tech-skills__bar--process {
+      background-color: #276daf;
+      height: 100%;
+    }
   }
 
   .icon-tech-skill {
@@ -308,6 +350,10 @@ canvas {
       margin: 5em 0;
       display: flex;
       justify-content: space-evenly;
+    
+      span {
+        margin-top: 8px;
+      }
       div {
         align-items: center;
         border-radius: 50%;    

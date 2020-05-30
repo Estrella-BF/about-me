@@ -16,6 +16,12 @@
   <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700,800" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700" rel="stylesheet">
+  <!--Animate css-->
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+  />
+
   <link rel="stylesheet" href="style/css/main.css">
   <title>My Portfolio</title>
 </head>
@@ -35,9 +41,17 @@
         <h1>Estrella Benites</h1>
         <p>Front-end Developer</p>
       </div>
+      
+      <a  
+        href="#my-self"
+        class="hidden arrow-down animate__animated animate__bounce animate__repeat-5 animate__slow" 
+        id="arrow-down"
+        >
+          <i class="fas fa-angle-down"></i>
+      </a>
 
     </div>
-    <!-- <a href="#my-self" class="arrow"></a> -->
+    
   </main>
 
   <section id="my-self">
@@ -89,9 +103,29 @@
             <h2>Tech Skills</h2>
             <hr>
           </div>
-          <div class="tech-skills-box">
+        </div>
+
+        <div class="col-xs-12 col-md-7">
+          <div class="animate__animated animate__bounceInLeft">
+            <div id="tech-skills-box">
+            </div>            
           </div>
         </div>
+        <div class="col-xs-12 col-md-5">
+          <div class="tech-skills-list animate__animated animate__bounceInRight text-center">
+            <div class="subtitle">Conocimientos</div>
+            <ul>
+              <li>SO Linux</li>
+              <li>Mysql y SQL server.</li>
+              <li>Jenkins</li>
+              <li>Docker</li>
+              <li>AWS</li>
+              <li>Kubernetes</li>   
+              <li>Scrum</li>   
+            </ul>            
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -101,7 +135,7 @@
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           <div class="project-title">
-            <h2>Projects</h2>
+            <h2>Personal projects</h2>
             <hr>
           </div>
         </div>
@@ -139,7 +173,7 @@
             </div>
           </figure>
         </div>
-        <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0">
+        <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-4">
           <figure class="project-img">
             <figcaption class="text-center">WebApp Clima</figcaption>
             <img class="img-responsive" src="assets/images/api-clima.png" alt="api-clima">
@@ -149,32 +183,13 @@
             </div>
           </figure>
         </div>
-        <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0">
-          <figure class="project-img">
-            <figcaption class="text-center">Redsco Perú</figcaption>
-            <img class="img-responsive" src="assets/images/redsco-peru.png" alt="redsco-peru">
-            <div>
-              <a href="http://redscoperu.com/" target="_blank">Ver</a>
-              <a disabled>privado</a>
-            </div>
-          </figure>
-        </div>
-        <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0">
-          <figure class="project-img">
-            <figcaption class="text-center">José Beneyto Psicólogo</figcaption>
-            <img class="img-responsive" src="assets/images/landing-jab.png" alt="api-clima">
-            <div>
-              <a href="http://www.joseandresbeneytopsicologo.com/" target="_blank">Ver</a>
-              <a target="_blank">Privado</a>
-            </div>
-          </figure>
-        </div>
+  
       </div>
     </div>
   </section>
 
   <section id="my-contact-info">
-    <div class="container">
+    <div class="animate__animated  container animate__bounce">
       <div class="row">
         <div class="col-xs-12">
           <div class="contact-info-title">
@@ -183,26 +198,42 @@
           </div>
           <div class="contact-info-container">
             <div class="contact-box-icons">
-              <div class="linkedin-icon">
-                <a href="https://www.linkedin.com/in/estrella-benites/" target="_blank">
-                  <i class="fab fa-linkedin"></i>
-                </a>
+              <div>
+                <div class="linkedin-icon">
+                  <a href="https://www.linkedin.com/in/estrella-benites/" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                </div>    
+                <span>Linkedin</span>            
               </div>
-              <div class="cv-icon">
-                <a href="assets/docs/cv-es.pdf" target="_blank">
-                  <i class="fas fa-file-alt"></i>
-                </a>
+    
+              <div>
+                <div class="cv-icon">
+                  <a href="assets/docs/cv-es.pdf" target="_blank">
+                    <i class="fas fa-file-alt"></i>
+                  </a>
+                </div>
+                <span>CV</span>   
               </div>
-              <div class="github-icon">
-                <a href="https://github.com/estrella-bf" target="_blank">
-                  <i class="fab fa-github"></i>
-                </a>
+              
+              <div>
+                <div class="github-icon">
+                  <a href="https://github.com/estrella-bf" target="_blank">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+                <span>Github</span>   
               </div>
-              <div class="whatsapp-icon" id="wpp">
-                <a href="" target="">
-                  <i class="fab fa-whatsapp"></i>
-                </a>
+
+              <div>
+                <div class="whatsapp-icon" id="wpp">
+                  <a href="" target="">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </div>    
+                <span>Whatsapp</span>     
               </div>
+       
             </div>
           </div>
         </div>

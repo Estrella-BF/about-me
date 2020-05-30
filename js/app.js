@@ -2,23 +2,38 @@ $(document).ready(function () {
   let $menuHome = $('#menu-home-container');
   const $projectImg = $('.project-img').find('img');
 
+  let stoppedMouse = null;
+  const limitTime = 2000;
+  let firstTime = true;
+
+  if (firstTime) {
+    $(document).on('mousemove', function() {
+      clearTimeout(stoppedMouse);
+      firstTime = false;
+      stoppedMouse = setTimeout(function() {
+          console.log('tiempo limite')
+        $('#arrow-down').removeClass('hidden')
+      }, limitTime);
+    });
+  }
+
   const arrIconsTech = [
-    { tool : 'javascript' , description : 'Advanced'},
-    { tool : 'java' , description : 'basic'},
-    { tool : 'angular' , description : 'Advanced'},
-    { tool : 'react' , description : 'Intermediate'},
-    { tool : 'redux' , description : 'Intermediate'},
-    { tool : 'jquery' , description : 'Advanced'},
-    { tool : 'firebase' , description : 'Intermediate'},
-    { tool : 'node js' , description : 'Intermediate'},
-    { tool : 'git' , description : 'Intermediate'},
-    { tool : 'sass' , description : 'Advanced'},
-    { tool : 'gulp' , description : 'Intermediate'},
-    { tool : 'webpack' , description : 'Intermediate'},
-    { tool : 'photoshop' , description : 'Intermediate'},
+    { tool : 'javascript' , percent : 90 },
+    { tool : 'java' , percent : 20 },
+    { tool : 'angular' , percent : 80 },
+    { tool : 'react' , percent : 50 },
+    { tool : 'redux' , percent : 70 },
+    { tool : 'jquery' , percent : 80 },
+    { tool : 'firebase' , percent : 60 },
+    { tool : 'node js' , percent : 60 },
+    { tool : 'ionic' , percent : 70 },
+    { tool : 'sass' , percent : 80 }
   ]
 
   $('.modal-info').hide();
+
+  $('#arrow-down').on('click', showInfo);
+
 
   // Creando un clon del menu justo alado del original
   $('#menu-home-container').addClass('original').clone().insertAfter('#menu-home-container').addClass('cloned')
@@ -68,12 +83,18 @@ $(document).ready(function () {
 
 // Adding icons
   arrIconsTech.map(index =>
-    $('.tech-skills-box').append(
-      `<figure class="icon-tech-skill">
-          <img src="${'assets/images/' + index.tool + '.png'}" class="img-responsive">
-          <p>${index.tool}</p>
-          <figcaption>${index.description}</figcaption>
-        </figure>`
+    $('#tech-skills-box').append(
+      `
+        <div class="tech-skills-box">
+          <div>${index.tool}</div>
+          <div class="tech-skills__bar">
+            <div 
+            class="tech-skills__bar--process"
+            style=";width:${index.percent}%"
+            ></div>
+          </div>
+        </div>
+      `
     )
   );
 
@@ -102,9 +123,6 @@ $(this).next().next().append(`
 
 `)
   }
-
-  // $projectImg.on('click', showInfo);
-
 
 });
 
