@@ -2,20 +2,11 @@ $(document).ready(function () {
   let $menuHome = $('#menu-home-container');
   const $projectImg = $('.project-img').find('img');
 
-  let stoppedMouse = null;
   const limitTime = 2000;
-  let firstTime = true;
 
-  if (firstTime) {
-    $(document).on('mousemove', function() {
-      clearTimeout(stoppedMouse);
-      firstTime = false;
-      stoppedMouse = setTimeout(function() {
-          console.log('tiempo limite')
-        $('#arrow-down').removeClass('hidden')
-      }, limitTime);
-    });
-  }
+  stoppedMouse = setTimeout(function() {
+    $('#arrow-down').removeClass('hidden')
+  }, limitTime);
 
   const arrIconsTech = [
     { tool : 'javascript' , percent : 90 },
