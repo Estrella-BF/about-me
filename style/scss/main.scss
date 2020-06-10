@@ -9,7 +9,7 @@ $color-azul : #245d88;
 $color-azul-claro : #0C8CE8;
 $color-verde: #4bceb4;
 $color-gris : #808080;
-$opacity-blue: rgba(231, 235, 239, 0.35);
+$opacity-blue: rgba(247, 247, 247, 0.35);
 $linkedin-color: #01b8f4; 
 $whatsapp-color: #25D366;
 $cv-color: #a364bd;
@@ -58,7 +58,7 @@ ul {
 }
 
 #menu-home-container {
-  background-color: #fff;
+  background-color: transparent;
   border-radius: 0 0 8px 8px;
   ul {
     font-size: 1.6rem;
@@ -68,7 +68,7 @@ ul {
     padding: 0.6em 0;    
     a {
       color: #fff;
-      font-weight: 100;
+      font-weight: 400;
       font-size: 1.8rem;
       padding: 0;
       p {
