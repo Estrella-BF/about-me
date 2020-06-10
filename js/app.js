@@ -1,6 +1,4 @@
 $(document).ready(function () {
-  let $menuHome = $('#menu-home-container');
-  const $projectImg = $('.project-img').find('img');
 
   const limitTime = 2000;
 
@@ -9,21 +7,20 @@ $(document).ready(function () {
   }, limitTime);
 
   const arrIconsTech = [
-    { tool : 'javascript' , percent : 90 },
-    { tool : 'java' , percent : 20 },
-    { tool : 'angular' , percent : 80 },
-    { tool : 'react' , percent : 50 },
-    { tool : 'redux' , percent : 70 },
-    { tool : 'jquery' , percent : 80 },
-    { tool : 'firebase' , percent : 60 },
-    { tool : 'node js' , percent : 60 },
-    { tool : 'ionic' , percent : 70 },
-    { tool : 'sass' , percent : 80 }
+    { tool : 'Javascript' , percent : 90 },
+    { tool : 'Java' , percent : 20 },
+    { tool : 'Angular' , percent : 80 },
+    { tool : 'TypeScript' , percent : 70 },
+    { tool : 'React' , percent : 50 },
+    { tool : 'Redux' , percent : 70 },
+    { tool : 'JQuery' , percent : 80 },
+    { tool : 'Firebase' , percent : 60 },
+    { tool : 'NodeJs' , percent : 60 },
+    { tool : 'Ionic' , percent : 70 },
+    { tool : 'Sass' , percent : 80 }
   ]
 
   $('.modal-info').hide();
-
-  $('#arrow-down').on('click', showInfo);
 
 
   // Creando un clon del menu justo alado del original
@@ -89,11 +86,6 @@ $(document).ready(function () {
     )
   );
 
-  /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-  particlesJS.load('particles-js', 'js/particles.json', function () {
-    // console.log('callback - particles.js config loaded');
-  });
-
   // Evento para whastapp
   $('#wpp').on('click', function(){
     window.open("https://api.whatsapp.com/send?phone=51971313111&text=I'm%20interested%20in%20your%20portfolio");
@@ -103,17 +95,6 @@ $(document).ready(function () {
   $('#myModal').on('shown.bs.modal', function () {
     $('#myInput').focus()
   })
-  console.log($('.modal-info'));
-
-  // Images project
-  function showInfo() {
-    // console.log($projectImg)
-    console.log($(this))
-    console.log()
-$(this).next().next().append(`
-
-`)
-  }
 
 });
 

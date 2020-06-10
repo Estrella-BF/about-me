@@ -100,6 +100,11 @@ canvas {
   margin-right: 46px;
 }
 
+.arrow-down:focus, .arrow-down:hover {
+  color: #00BCD4;
+  text-decoration: underline;
+}
+
 /* MAIN MENU */
 .background-box {
   background-color: #050818;
